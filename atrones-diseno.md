@@ -1,17 +1,31 @@
-# Patrones de diseño
+# Patrones de diseño del sistema de control de rescate y adopción animal
 
-## 1. Singleton
+Los patrones de diseño son soluciones que sirven como guía para organizar el software y resolver problemas comunes durante su desarrollo. Para este proyecto se proponen tres patrones que podrían ayudar a mantener el sistema ordenado y facilitar futuras mejoras.
 
-Es un patrón creacional que controla la creación de una única instancia de una clase. En el sistema podría utilizarse para gestionar una configuración compartida de la aplicación.
+## 1. Singleton (patrón creacional)
 
-## 2. Factory Method
+**Objetivo:** controlar que una clase tenga una única instancia compartida.
 
-Es un patrón creacional que organiza la creación de objetos. En el sistema podría utilizarse para crear diferentes tipos de notificaciones relacionadas con los rescates y las adopciones.
+**Aplicación en el sistema:** podría utilizarse para administrar una configuración general de la aplicación, como ciertos parámetros comunes del sistema.
 
-## 3. Observer
+**Beneficio:** evita tener varias instancias de un mismo administrador de configuración cuando no son necesarias.
 
-Es un patrón de comportamiento que permite avisar a otros componentes cuando ocurre un cambio. Por ejemplo, podría utilizarse para notificar cuando una solicitud de adopción cambia de pendiente a aprobada.
+## 2. Factory Method (patrón creacional)
+
+**Objetivo:** organizar la creación de objetos sin depender directamente de una clase concreta.
+
+**Aplicación en el sistema:** podría utilizarse para crear diferentes tipos de notificaciones, por ejemplo, avisos de rescate registrado, solicitud de adopción recibida o adopción aprobada.
+
+**Beneficio:** permite añadir nuevos tipos de notificaciones sin modificar toda la lógica del sistema.
+
+## 3. Observer (patrón de comportamiento)
+
+**Objetivo:** permitir que varios componentes reciban avisos cuando ocurre un cambio en otro componente.
+
+**Aplicación en el sistema:** podría utilizarse para notificar a las personas responsables cuando una solicitud de adopción cambie de estado o cuando se registre un nuevo rescate.
+
+**Beneficio:** facilita la comunicación entre las partes del sistema y ayuda a mantener actualizada la información.
 
 ## Conclusión
 
-Estos patrones ofrecen distintas formas de organizar el software. Su aplicación dependerá de las necesidades concretas del sistema y de cómo se implemente.
+Los tres patrones propuestos tienen funciones diferentes. Singleton permite compartir una configuración, Factory Method organiza la creación de objetos y Observer facilita las notificaciones cuando ocurre un cambio. Su implementación dependerá de los requisitos definitivos y de cómo se programe el sistema.
