@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reportar Rescate</title>
+</head>
+<body>
+
+    <header>
+        <h1>Registro de Rescate Animal</h1>
+        <p>Formulario para reportar animales rescatados</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Inicio</a> |
+        <a href="reportar.html">Reportar rescate</a> |
+        <a href="rescates.html">Consultar rescates</a>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Formulario de Rescate</h2>
+
+            <p>Complete los siguientes datos del animal encontrado.</p>
+
+            <form action="reportar.html" method="get">
+
+                <fieldset>
+                    <legend>Datos del animal</legend>
+
+                    <p>
+                        <label for="nombre">Nombre provisional del animal:</label>
+                        <input type="text" id="nombre" name="nombre"
+                               required minlength="3">
+                    </p>
+
+                    <p>
+                        <label for="categoria">Categoría del animal:</label>
+                        <select id="categoria" name="categoria" required>
+                            <option value="">Seleccione una opción</option>
+                            <option value="Perro">Perros</option>
+                            <option value="Gato">Gatos</option>
+                            <option value="Fauna Silvestre">Fauna Silvestre</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label for="ubicacion">Lugar del rescate:</label>
+                        <input type="text" id="ubicacion" name="ubicacion" required>
+                    </p>
+
+                    <p>
+                        <label for="fecha">Fecha del rescate:</label>
+                        <input type="date" id="fecha" name="fecha" required>
+                    </p>
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>Nivel de urgencia médica</legend>
+
+                    <input type="radio" id="alta" name="urgencia"
+                           value="Alta" required>
+                    <label for="alta">Alta</label>
+
+                    <input type="radio" id="media" name="urgencia"
+                           value="Media">
+                    <label for="media">Media</label>
+
+                    <input type="radio" id="baja" name="urgencia"
+                           value="Baja">
+                    <label for="baja">Baja</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Descripción del rescate</legend>
+
+                    <p>
+                        <label for="descripcion">
+                            Describa el estado en que encontró al animal:
+                        </label>
+                    </p>
+
+                    <textarea id="descripcion" name="descripcion"
+                              rows="5" cols="40" required
+                              minlength="10"></textarea>
+
+                </fieldset>
+
+                <p>
+                    <button type="submit">Enviar reporte</button>
+                    <button type="reset">Limpiar formulario</button>
+                </p>
+
+            </form>
+
+            <p>
+                Este formulario es una demostración y no guarda
+                los datos enviados.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Universidad Técnica de Manabí - 2026</p>
+    </footer>
+
+</body>
+</html>
